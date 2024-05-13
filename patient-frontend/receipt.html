@@ -1,0 +1,119 @@
+<!--
+CSCI 455 EMRKS Project - Optomet.me Optometry Clinic
+Copyright (C) 2024  Julia Dewhurst, Joseph Melancon, Anna Wille, Maya Wyganowska
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU Affero General Public License as published
+by the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program.  If not, see <https://www.gnu.org/licenses/>.
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>RECEIPT</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            -webkit-print-color-adjust: exact !important;   /* Chrome, Safari 6 – 15.3, Edge */
+            color-adjust: exact !important;                 /* Firefox 48 – 96 */
+            print-color-adjust: exact !important;           /* Firefox 97+, Safari 15.4+ */
+        }
+        body{
+            font-family: Helvetica, Arial, sans-serif;
+            margin: 0;
+            width: 100%;
+        }
+
+        header{
+            padding: 24px;
+            background: linear-gradient(to left, #aaa, #eee), #eee;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+        }
+
+        table{
+            width: 100%;
+        }
+
+        #bodydiv{
+            padding: 24px;
+        }
+    </style>
+    <script>
+        window.addEventListener('load', function () {
+            try{
+                args = decodeURIComponent(window.location.hash).split("#")
+                console.log(args[args.length - 1].replace("+", " "))
+                info = JSON.parse(args[args.length - 1]);
+                console.log(info)
+                
+                document.getElementById("title").innerHTML = info.type + " of Transaction"
+                document.getElementById("accesstime").innerHTML = "Accessed " + info.accesstime;
+                document.getElementById("billid").innerHTML = "Bill ID: " + info.billid;
+                document.getElementById("date").innerHTML = info.date;
+                document.getElementById("servrend").innerHTML = info.servrend;
+                document.getElementById("cost").innerHTML = info.cost;
+                document.getElementById("paymentstat").innerHTML = info.paymentstat;
+                
+                window.print();
+                setTimeout(function () { window.close(); }, 100);
+            } catch {
+                setTimeout(function () { window.close(); }, 100);
+            }
+        })
+    </script>
+</head>
+<body>
+    <header>
+        <h1 id="title">Receipt of Transaction</h1>
+        <p><i id="accesstime">Accessed Sometime IDK</i></p>
+        <p><i id="billid">Bill ID: </i></p>
+    </header>
+    <div id="bodydiv">
+        <table>
+            <tr>
+                <th>Date</th>
+                <th>Service Rendered</th>
+                <th>Cost of Service</th>
+                <th>Payment Status</th>
+            </tr>
+            <tr>
+                <td id="date">Date</td>
+                <td id="servrend">Service Rendered</td>
+                <td id="cost">Cost of Service</td>
+                <td id="paymentstat">Payment Status</td>
+            </tr>
+        </table>
+        <p>
+            BY ATTENDING THIS MEDICAL PRACTICE (optomet.me and Associates), YOU AGREE TO
+            PAY ALL OUTSTANDING BILLS, CHARGES, OR SIMMILAR. FEES ARE ONLY TO BE WAIVED
+            AT THE DISCRETION OF THE PARTY RENDERING SERVICE (optomet.me). BILLS ARE TO
+            BE PAID IN A TIMELY MANNER VIA A METHOD PREFERED BY THE PARTY RENDERING SERVICE.
+            IN THE EVENT OF DISPUTE, THE PARTY RENDERING SERVICE MAY BE REACHED AS FOLLOWS:
+        </p>
+        <blockquote>OptometMe<br />
+            123 Optometry Way<br />
+            Grand Forks, ND 58203<br />
+            701-555-5555
+        </blockquote>
+        <p>CHECKS MAY BE MADE PAYABLE TO:</p>
+        <blockquote>
+            OptometMe Optometry Clinic
+        </blockquote>
+        <p>
+            THANK YOU FOR YOUR BUSINESS
+        </p>
+    </div>
+</body>

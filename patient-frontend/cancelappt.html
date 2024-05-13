@@ -1,0 +1,137 @@
+<!--
+CSCI 455 EMRKS Project - Optomet.me Optometry Clinic
+Copyright (C) 2024  Julia Dewhurst, Joseph Melancon, Anna Wille, Maya Wyganowska
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU Affero General Public License as published
+by the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program.  If not, see <https://www.gnu.org/licenses/>.
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Optomet.me: Cancel Appointment</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <script src="/scripts/encryption.js"></script>
+    <script src="/scripts/cancelappt.js"></script>
+    <script src="/scripts/funfact.js"></script>
+    <script>
+        function validateTelLike(event) {
+          var key = event.which || event.keyCode || 0;
+          return ((key >= 48 && key <= 57) || (key == 45))
+        }
+      </script>
+    <link rel="icon" href="/melogo.svg" type="image/svg+xml">
+</head>
+
+<body>
+    <div id="screenfill">
+        <div id="loadspinner">
+            <div id="load1" class="loadblock"></div>
+            <div id="load2" class="loadblock"></div>
+            <div id="load3" class="loadblock"></div>
+            <div id="load4" class="loadblock"></div>
+            <div id="load5" class="loadblock"></div>
+            <div id="load6" class="loadblock"></div>
+            <div id="load7" class="loadblock"></div>
+            <div id="load8" class="loadblock"></div>
+            <div id="load9" class="loadblock"></div>
+        </div>
+        <p id="factholder">Fun Fact: lsajfpoiehfoeihfheehfiehoif</p>
+    </div>
+    <div id="wrap">
+
+        <header id="page-header" style="display: grid;">
+            <svg viewBox="0 0 125.18997 34.487488" version="1.1" id="svg5"
+                xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg"
+                style="/*! margin: 0 auto; *//*! padding: 0 auto; */margin: 12px auto;">
+                <defs id="defs2">
+                    <rect x="303.14313" y="462.20737" width="400.74139" height="148.70799" id="rect458"></rect>
+                </defs>
+                <g id="layer2" style="display:inline" transform="translate(-65.090891,-132.30628)">
+                    <g aria-label="OPTOMET" transform="matrix(0.26458333,0,0,0.26458333,-16.25298,5.0341797)" id="logotext"
+                        style="letter-spacing:-3.34px;white-space:pre;shape-inside:url(#rect458);display:inline;">
+                        <path
+                            d="m 355.93036,521.61307 q 0,14.23699 -6.65625,21.4017 -6.65626,7.16472 -17.51889,7.16472 -10.81641,0 -17.56511,-7.16472 -6.7487,-7.16471 -6.7487,-21.4017 v -11.1862 q 0,-14.56055 6.70247,-21.95639 6.70248,-7.44206 17.51889,-7.44206 10.86264,0 17.56511,7.44206 6.70248,7.39584 6.70248,21.95639 z m -13.58985,-11.27865 q 0,-9.61459 -2.72722,-13.77474 -2.72721,-4.16016 -7.95052,-4.16016 -5.17708,0 -7.9043,4.11393 -2.68099,4.06771 -2.72721,13.45118 v 11.64844 q 0,9.15235 2.72721,13.22006 2.77344,4.02148 7.99675,4.02148 5.17708,0 7.85807,-3.97526 2.681,-3.97526 2.72722,-12.94271 z"
+                            style="font-weight:bold;font-size:94.6667px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed,  Bold';"
+                            id="path9306"></path>
+                        <path
+                            d="m 375.97969,525.58833 v 23.66668 H 362.34362 V 481.9529 h 22.97331 q 10.16928,0 15.9935,6.33269 5.87044,6.28646 5.87044,15.94727 0,9.75326 -5.82422,15.53125 -5.77799,5.778 -15.90104,5.82422 z m 0,-32.31056 v 20.98569 h 9.33724 q 4.25261,0 6.14779,-2.77344 1.94141,-2.81966 1.94141,-7.16472 0,-4.34505 -1.94141,-7.67318 -1.89518,-3.37435 -6.14779,-3.37435 z"
+                            style="font-weight:bold;font-size:94.6667px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed,  Bold'"
+                            id="path9308"></path>
+                        <path
+                            d="M 409.85,493.27777 V 481.9529 h 46.63999 v 11.32487 h -16.68686 v 55.97724 h -13.58985 v -55.97724 z"
+                            style="font-weight:bold;font-size:94.6667px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed,  Bold'"
+                            id="path9310"></path>
+                        <path
+                            d="m 507.04715,521.61307 q 0,14.23699 -6.65625,21.4017 -6.65626,7.16472 -17.51889,7.16472 -10.81641,0 -17.56511,-7.16472 -6.7487,-7.16471 -6.7487,-21.4017 v -11.1862 q 0,-14.56055 6.70248,-21.95639 6.70247,-7.44206 17.51888,-7.44206 10.86264,0 17.56511,7.44206 6.70248,7.39584 6.70248,21.95639 z M 493.4573,510.33442 q 0,-9.61459 -2.72721,-13.77474 -2.72722,-4.16016 -7.95053,-4.16016 -5.17708,0 -7.9043,4.11393 -2.68099,4.06771 -2.72721,13.45118 v 11.64844 q 0,9.15235 2.72721,13.22006 2.77344,4.02148 7.99675,4.02148 5.17709,0 7.85808,-3.97526 2.68099,-3.97526 2.72721,-12.94271 z"
+                            style="font-weight:bold;font-size:94.6667px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed,  Bold'"
+                            id="path9312"></path>
+                        <path
+                            d="m 543.92201,530.58052 12.66536,-48.62762 h 17.75001 v 67.30211 h -13.63607 v -18.21225 l 1.24805,-27.87305 -13.40496,46.0853 h -9.29102 l -13.40495,-46.0853 1.24805,27.87305 v 18.21225 H 513.46041 V 481.9529 h 17.75 z"
+                            style="font-weight:bold;font-size:94.6667px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed,  Bold'"
+                            id="path9314"></path>
+                        <path
+                            d="M 581.90625,549.25501 V 481.9529 h 38.5508 v 11.32487 h -24.91473 v 15.90105 h 21.12436 v 10.95508 h -21.12436 v 17.84246 h 25.00718 v 11.27865 z"
+                            style="font-weight:bold;font-size:94.6667px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed,  Bold'"
+                            id="path9316"></path>
+                        <path
+                            d="M 622.94124,493.27777 V 481.9529 h 46.64 v 11.32487 h -16.68686 v 55.97724 h -13.58985 v -55.97724 z"
+                            style="font-weight:bold;font-size:94.6667px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed,  Bold'"
+                            id="path9318"></path>
+                    </g>
+                    <path style="display:inline;fill:var(--links);stroke-width:0.209879;fill-opacity:1"
+                        d="m 157.91812,159.03893 c 0,0 0.68971,-2.46473 1.23227,-6.96251 0.54256,-4.49778 0.30693,-6.92148 0.49862,-11.26382 0.1917,-4.34235 2.35075,-2.52276 2.49416,-2.06973 0.14342,0.45303 0.44247,7.84267 0.44247,7.84267 0,0 1.19101,-2.81974 2.34847,-4.27189 1.15744,-1.45215 2.39696,-2.55219 3.49513,-2.63467 1.09818,-0.0825 1.1875,0.45283 1.41796,0.75001 0.23045,0.29719 0.75208,1.08781 0.89197,3.056 0.13988,1.96817 0.36557,7.16788 0.36557,7.16788 0,0 1.08409,-1.91367 2.04797,-3.08874 0.96388,-1.17506 2.72233,-3.30634 3.72953,-4.0779 1.0072,-0.77157 1.68613,-0.78877 2.14185,-0.56432 0.45572,0.22444 1.25381,0.82606 1.26314,2.66555 0.009,1.83948 -2.08382,8.38067 -2.39572,10.21103 -0.3119,1.83036 -1.34189,7.48539 -0.48743,8.41507 0.85446,0.9297 1.6339,1.06689 2.61684,1.02585 0.98296,-0.041 -0.72721,1.1846 -1.3564,1.3106 -0.62918,0.12601 -1.93481,0.51604 -2.6328,-0.0717 -0.69799,-0.58774 -1.52779,-1.24614 -1.73483,-2.87093 -0.20703,-1.62478 0.0247,-4.27292 0.62111,-6.92168 0.59644,-2.64877 1.65732,-7.40477 1.80819,-8.44388 0.15087,-1.03911 0.63147,-2.5381 -1.21506,0.0126 -1.84653,2.55074 -3.41059,6.01915 -3.9059,7.13059 -0.49531,1.11143 -1.82456,4.38151 -2.37769,7.87292 -0.55313,3.49141 -2.58161,2.62472 -2.53292,0.12165 0.0487,-2.50307 0.74214,-8.88302 0.7896,-13.69208 0.0474,-4.80906 0.23315,-8.95287 -3.09517,-0.39148 -3.3283,8.56138 -4.38814,14.32977 -4.61777,15.34629 -0.22962,1.01652 -2.04423,3.1076 -2.74658,-0.24143 0.16202,-1.60669 0.10432,-1.95996 0.50879,-3.54054 z"
+                        id="path246"></path>
+                    <path id="path344" style="display:inline;fill:var(--links);stroke-width:0.209879;fill-opacity:1"
+                        d="m 187.26864,149.33172 c -5.14645,-0.063 -7.81991,5.77639 -7.90654,9.18344 0,0 -0.44113,7.19673 3.65854,8.16725 4.09966,0.97051 8.564,-5.11191 3.69132,-2.56118 -4.87266,2.55073 -4.31933,-5.06292 -4.31933,-5.06292 0,0 0.76158,1.04331 4.24801,-1.3634 3.48644,-2.4067 5.77444,-8.3002 0.628,-8.36319 z m -0.88215,2.64399 c 0.31998,-0.002 0.64186,0.12485 0.95593,0.42632 2.01004,1.92942 -2.89949,3.75435 -3.24206,3.85653 -0.34257,0.10216 -1.21213,0.22381 -1.21213,0.22381 l 0.10453,-0.76614 c 0,0 1.66581,-3.73295 3.39373,-3.74052 z">
+                    </path>
+                </g>
+            </svg>
+        </header>
+        <div id="nonheaderfooter">
+        <div id="markdown_content">
+            <div class="casecontainer">
+                <h3 class="caseheader">Cancel Appointment</h3>
+                <p id="statement">ERROR</p>
+                <div style="/*! display: flex; */width: 100%;">
+                    <div style="display: flex;padding: 6px 0;">
+                        <div style="display: grid; width: 100%;"><label for="pass" class="regitemlabel" style="margin: 0 8px;"><b>Confirm Password</b></label>
+                            <input id="pass" class="loginitem fullwidth" type="password" placeholder="✏ Enter Password">
+                        </div>
+                    </div>       
+                </div>
+                <button id="submitpayment" class="loginbutton" type="submit" style="width: calc(100% - 16px); margin: 12px 8px;"><span>Submit</span><span>&#8618;</span></button>
+            </div>
+            </div>
+        </div>
+        <footer class="page-footer">
+            <div class="footer_div">
+                <div>
+                    <p style="text-align: center;">Produced May 2024 by Julia Dewhurst, Joseph Melancon, Anna Wille, and Maya Wyganowski</p>
+                </div>
+                <div>
+                    <p style="text-align: right;">home.md</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+</body>
+
+</html>

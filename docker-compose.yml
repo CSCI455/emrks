@@ -1,0 +1,86 @@
+# CSCI 455 EMRKS Project - Optomet.me Optometry Clinic
+# Copyright (C) 2024  Julia Dewhurst, Joseph Melancon, Anna Wille, Maya Wyganowska
+# 
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU Affero General Public License as published
+# by the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+# 
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU Affero General Public License for more details.
+# 
+# You should have received a copy of the GNU Affero General Public License
+# along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+version: '3.9'
+services:
+  nginx:
+    build: ./nginx
+    hostname: nginx
+    ports:
+      - 80:80
+      - 443:443
+    depends_on:
+      - patient-backend
+      - patient-frontend
+    networks:
+      network:
+        ipv4_address: 10.5.0.7
+  
+  patient-frontend:
+    image: httpd:latest
+    container_name: my-apache-app
+    volumes:
+    - ./patient-frontend:/usr/local/apache2/htdocs
+    depends_on:
+      - patient-backend
+    networks:
+      network:
+        ipv4_address: 10.5.0.8
+  
+  patient-backend:
+    build: ./patient-backend/
+    volumes:       
+     - ./patient-backend/:/usr/src/myapp
+    working_dir: /usr/src/myapp
+    environment:
+     - DBHOST=10.5.0.10
+     - DBUSER=backend
+     - DBPASS=backend
+     - PRIVKEYPASS=backend
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      network:
+        ipv4_address: 10.5.0.9
+  
+  db:
+    image: mysql
+    cap_add:
+     - SYS_NICE
+    restart: always
+    environment:
+     - MYSQL_DATABASE=Optometry Clinic
+     - MYSQL_ROOT_PASSWORD=toortoor
+    ports:
+     - 3306:3306
+    volumes:
+     - ./mysql/optometryclinic.sql:/docker-entrypoint-initdb.d/init.sql
+    healthcheck:
+      test: ["CMD-SHELL", 'mysql -u root --database="Optometry Clinic" --password=toortoor --execute="SELECT Fname FROM PATIENT WHERE Ssn=123123123;" -B']
+      interval: 5s
+      timeout: 5s
+      retries: 4
+    networks:
+      network:
+        ipv4_address: 10.5.0.10
+
+networks:
+  network:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 10.5.0.0/16

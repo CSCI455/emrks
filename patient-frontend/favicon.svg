@@ -1,0 +1,44 @@
+<!--
+CSCI 455 EMRKS Project - Optomet.me Optometry Clinic
+Copyright (C) 2024  Julia Dewhurst, Joseph Melancon, Anna Wille, Maya Wyganowska
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU Affero General Public License as published
+by the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program.  If not, see <https://www.gnu.org/licenses/>.
+-->
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="125.18997mm"
+   height="34.487488mm"
+   viewBox="0 0 125.18997 34.487488"
+   version="1.1"
+   id="svg5"
+   xml:space="preserve"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><defs
+     id="defs2"><rect
+       x="303.14313"
+       y="462.20737"
+       width="400.74139"
+       height="148.70799"
+       id="rect458" /></defs><g
+     id="layer2"
+     style="display:inline"
+     transform="translate(-65.090891,-132.30628)"><path
+       style="display:inline;fill:#ff0000;stroke-width:0.209879;fill-opacity:1"
+       d="m 157.91812,159.03893 c 0,0 0.68971,-2.46473 1.23227,-6.96251 0.54256,-4.49778 0.30693,-6.92148 0.49862,-11.26382 0.1917,-4.34235 2.35075,-2.52276 2.49416,-2.06973 0.14342,0.45303 0.44247,7.84267 0.44247,7.84267 0,0 1.19101,-2.81974 2.34847,-4.27189 1.15744,-1.45215 2.39696,-2.55219 3.49513,-2.63467 1.09818,-0.0825 1.1875,0.45283 1.41796,0.75001 0.23045,0.29719 0.75208,1.08781 0.89197,3.056 0.13988,1.96817 0.36557,7.16788 0.36557,7.16788 0,0 1.08409,-1.91367 2.04797,-3.08874 0.96388,-1.17506 2.72233,-3.30634 3.72953,-4.0779 1.0072,-0.77157 1.68613,-0.78877 2.14185,-0.56432 0.45572,0.22444 1.25381,0.82606 1.26314,2.66555 0.009,1.83948 -2.08382,8.38067 -2.39572,10.21103 -0.3119,1.83036 -1.34189,7.48539 -0.48743,8.41507 0.85446,0.9297 1.6339,1.06689 2.61684,1.02585 0.98296,-0.041 -0.72721,1.1846 -1.3564,1.3106 -0.62918,0.12601 -1.93481,0.51604 -2.6328,-0.0717 -0.69799,-0.58774 -1.52779,-1.24614 -1.73483,-2.87093 -0.20703,-1.62478 0.0247,-4.27292 0.62111,-6.92168 0.59644,-2.64877 1.65732,-7.40477 1.80819,-8.44388 0.15087,-1.03911 0.63147,-2.5381 -1.21506,0.0126 -1.84653,2.55074 -3.41059,6.01915 -3.9059,7.13059 -0.49531,1.11143 -1.82456,4.38151 -2.37769,7.87292 -0.55313,3.49141 -2.58161,2.62472 -2.53292,0.12165 0.0487,-2.50307 0.74214,-8.88302 0.7896,-13.69208 0.0474,-4.80906 0.23315,-8.95287 -3.09517,-0.39148 -3.3283,8.56138 -4.38814,14.32977 -4.61777,15.34629 -0.22962,1.01652 -2.04423,3.1076 -2.74658,-0.24143 0.16202,-1.60669 0.10432,-1.95996 0.50879,-3.54054 z"
+       id="letm" /><path
+       id="lete"
+       style="display:inline;fill:#ff0000;stroke-width:0.209879;fill-opacity:1"
+       d="m 187.26864,149.33172 c -5.14645,-0.063 -7.81991,5.77639 -7.90654,9.18344 0,0 -0.44113,7.19673 3.65854,8.16725 4.09966,0.97051 8.564,-5.11191 3.69132,-2.56118 -4.87266,2.55073 -4.31933,-5.06292 -4.31933,-5.06292 0,0 0.76158,1.04331 4.24801,-1.3634 3.48644,-2.4067 5.77444,-8.3002 0.628,-8.36319 z m -0.88215,2.64399 c 0.31998,-0.002 0.64186,0.12485 0.95593,0.42632 2.01004,1.92942 -2.89949,3.75435 -3.24206,3.85653 -0.34257,0.10216 -1.21213,0.22381 -1.21213,0.22381 l 0.10453,-0.76614 c 0,0 1.66581,-3.73295 3.39373,-3.74052 z" /></g></svg>
