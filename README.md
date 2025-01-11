@@ -1,6 +1,6 @@
 # CSCI 455 Spring 2024 Project
 
-*Julia Dewhurst ([@juliaDewhurst](https://github.com/juliaDewhurst)), Joseph Melancon ([@jmelancon](https://github.com/jmelancon)), Anna Wille ([@annawille](https://github.com/annawille)), Maya Wyganowska ([@mayawyganowska](https://github.com/mayawyganowska))*
+*Julia Dewhurst ([@juliaDewhurst](https://github.com/juliaDewhurst)), Joseph Melancon ([@jmelancon](https://github.com/jmelancon)), Anna Wille ([@annawille](https://github.com/annawille)), Maya Wyganowska ([@maya-wyganowska](https://github.com/maya-wyganowska))*
 
 ## Project Description
 
